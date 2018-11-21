@@ -63,9 +63,9 @@
     },
     "launchUrlSchemes": [
     ],
-    "mainFile": "MyApp.qml",
+    "mainFile": "Demo.qml",
     "multipleInstances": true,
-    "projectFile": "MyApp.qmlproject",
+    "projectFile": "WorkshopDemo.qmlproject",
     "properties": {
     },
     "resources": {
