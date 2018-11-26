@@ -29,8 +29,7 @@ Page {
 
             onLoadStatusChanged: {
                 if (loadStatus === Enums.LoadStatusLoaded) {
-                    for (var i = 0; i < 5; i++)
-                        addGraphics();
+                    addGraphics();
                 }
             }
         }
@@ -43,32 +42,76 @@ Page {
     }
 
     function addGraphics() {
-        // create a graphic
-        var point = ArcGISRuntimeEnvironment.createObject(
+        // create graphic for Japan
+        var pointJapan = ArcGISRuntimeEnvironment.createObject(
                     "Point", {
-                        x: getRandomX(),
-                        y: getRandomY(),
+                        x:15529258.289,
+                        y: 4478951.784,
                         spatialReference: SpatialReference.createWebMercator()
                     });
 
-        var graphic = ArcGISRuntimeEnvironment.createObject(
+        var graphicJapan = ArcGISRuntimeEnvironment.createObject(
                     "Graphic", {
-                        geometry: point
+                        geometry: pointJapan
                     });
 
-        // add the graphic to the graphics overlay
-        graphicsOverlay.graphics.append(graphic);
+        // create graphic for UK
+        var pointUK = ArcGISRuntimeEnvironment.createObject(
+                    "Point", {
+                        x:-242452.379,
+                        y: 7081479.723,
+                        spatialReference: SpatialReference.createWebMercator()
+                    });
+
+        var graphicUK = ArcGISRuntimeEnvironment.createObject(
+                    "Graphic", {
+                        geometry: pointUK
+                    });
+
+
+        // create graphic for Turkey
+        var pointTurkey = ArcGISRuntimeEnvironment.createObject(
+                    "Point", {
+                        x:3964641.658,
+                        y:4733334.214,
+                        spatialReference: SpatialReference.createWebMercator()
+                    });
+
+        var graphicTurkey = ArcGISRuntimeEnvironment.createObject(
+                    "Graphic", {
+                        geometry: pointTurkey
+                    });
+
+        // create graphic for Greece
+        var pointGreece = ArcGISRuntimeEnvironment.createObject(
+                    "Point", {
+                        x:2641975.320,
+                        y:4584740.631,
+                        spatialReference: SpatialReference.createWebMercator()
+                    });
+
+        var graphicGreece = ArcGISRuntimeEnvironment.createObject(
+                    "Graphic", {
+                        geometry: pointGreece
+                    });
+
+        // create graphic for Dutch
+        var pointDutch = ArcGISRuntimeEnvironment.createObject(
+                    "Point", {
+                        x:549153.005,
+                        y:6864652.032,
+                        spatialReference: SpatialReference.createWebMercator()
+                    });
+
+        var graphicDutch = ArcGISRuntimeEnvironment.createObject(
+                    "Graphic", {
+                        geometry: pointDutch
+                    });
+        graphicsOverlay.graphics.append(graphicJapan);
+        graphicsOverlay.graphics.append(graphicUK);
+        graphicsOverlay.graphics.append(graphicGreece);
+        graphicsOverlay.graphics.append(graphicTurkey);
+        graphicsOverlay.graphics.append(graphicDutch);
     }
 
-    function getRandomX() {
-        return Math.floor(-226000 + getRandomNumber());
-    }
-
-    function getRandomY() {
-        return Math.floor(6550000 + getRandomNumber());
-    }
-
-    function getRandomNumber() {
-        return Math.floor((Math.random() * 10000000) + 1);
-    }
 }
