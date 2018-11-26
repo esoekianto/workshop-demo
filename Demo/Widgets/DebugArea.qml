@@ -7,6 +7,6 @@ Rectangle {
     border.width: debugWidth
     border.color: debugColor
 
-    property real debugWidth: 2 * scaleFactor
+    property real debugWidth: 2 * constants.scaleFactor
     property color debugColor: colors.red
 }

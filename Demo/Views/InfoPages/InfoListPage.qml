@@ -10,11 +10,11 @@ Page {
     id: infoListPage
 
     property var infoModel: [
-        { icon: images.turkey_icon, name: strings.turkey_santa_name, country: strings.turkey, description: strings.turkey_santa_description },
-        { icon: images.greece_icon, name: strings.greece_santa_name, country: strings.greece, description: strings.greece_santa_description },
-        { icon: images.uk_icon, name: strings.uk_santa_name, country: strings.uk, description: strings.uk_santa_description },
-        { icon: images.netherlands_icon, name: strings.netherlands_santa_name, country: strings.netherlands, description: strings.netherlands_santa_description },
-        { icon: images.japan_icon, name: strings.japan_santa_name, country: strings.japan, description: strings.japan_santa_description }
+        { background: images.turkey_map_icon, icon: images.turkey_icon, name: strings.turkey_santa_name, country: strings.turkey, description: strings.turkey_santa_description },
+        { background: images.greece_map_icon, icon: images.greece_icon, name: strings.greece_santa_name, country: strings.greece, description: strings.greece_santa_description },
+        { background: images.uk_map_icon, icon: images.uk_icon, name: strings.uk_santa_name, country: strings.uk, description: strings.uk_santa_description },
+        { background: images.netherlands_map_icon, icon: images.netherlands_icon, name: strings.netherlands_santa_name, country: strings.netherlands, description: strings.netherlands_santa_description },
+        { background: images.japan_map_icon, icon: images.japan_icon, name: strings.japan_santa_name, country: strings.japan, description: strings.japan_santa_description }
     ]
 
     ColumnLayout {
@@ -80,27 +80,38 @@ Page {
 
         Item {
             Layout.fillWidth: true
+            Layout.preferredHeight: 16 * constants.scaleFactor
+        }
+
+        Item {
+            Layout.fillWidth: true
             Layout.fillHeight: true
 
             ListView {
                 anchors.fill: parent
-                spacing: 1
-                clip: true
+
                 model: infoModel
 
+                spacing: 8 * constants.scaleFactor
+                clip: true
+
                 delegate: Widgets.TouchGestureArea {
-                    width: Math.min(parent.width, appManager.maximumScreenWidth)
+                    id: delegate
+
+                    width: Math.min(parent.width, appManager.maximumScreenWidth) - 32 * constants.scaleFactor
                     height: 144 * constants.scaleFactor
+                    anchors.horizontalCenter: parent.horizontalCenter
+
+                    radius: 8 * constants.scaleFactor
 
                     Widgets.GradientBackground {
-
+                        radius: delegate.radius
+                        backgroundImage: modelData.background
                     }
 
                     onClicked: {
 
                     }
-
-
                 }
             }
         }
