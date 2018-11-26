@@ -45,7 +45,7 @@ Page {
         // create graphic for Japan
         var pointJapan = ArcGISRuntimeEnvironment.createObject(
                     "Point", {
-                        x:15529258.289,
+                        x: 15529258.289,
                         y: 4478951.784,
                         spatialReference: SpatialReference.createWebMercator()
                     });
@@ -58,7 +58,7 @@ Page {
         // create graphic for UK
         var pointUK = ArcGISRuntimeEnvironment.createObject(
                     "Point", {
-                        x:-242452.379,
+                        x: -242452.379,
                         y: 7081479.723,
                         spatialReference: SpatialReference.createWebMercator()
                     });
@@ -72,8 +72,8 @@ Page {
         // create graphic for Turkey
         var pointTurkey = ArcGISRuntimeEnvironment.createObject(
                     "Point", {
-                        x:3964641.658,
-                        y:4733334.214,
+                        x: 3964641.658,
+                        y: 4733334.214,
                         spatialReference: SpatialReference.createWebMercator()
                     });
 
@@ -85,8 +85,8 @@ Page {
         // create graphic for Greece
         var pointGreece = ArcGISRuntimeEnvironment.createObject(
                     "Point", {
-                        x:2641975.320,
-                        y:4584740.631,
+                        x: 2641975.320,
+                        y: 4584740.631,
                         spatialReference: SpatialReference.createWebMercator()
                     });
 
@@ -98,8 +98,8 @@ Page {
         // create graphic for Dutch
         var pointDutch = ArcGISRuntimeEnvironment.createObject(
                     "Point", {
-                        x:549153.005,
-                        y:6864652.032,
+                        x: 549153.005,
+                        y: 6864652.032,
                         spatialReference: SpatialReference.createWebMercator()
                     });
 
