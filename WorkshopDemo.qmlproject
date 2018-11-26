@@ -3,7 +3,7 @@
 import QmlProject 1.1
 
 Project {
-    mainFile: "MyApp.qml"
+    mainFile: "Demo.qml"
 
     QmlFiles {
         directory: "."
@@ -23,7 +23,7 @@ Project {
     Files {
         directory: "."
         recursive: true
-        filter: "*.json;*.html;*.txt;*.conf"
+        filter: "*.json;*.html;*.txt;*.conf;*.ttf;*.otf"
     }
 
     importPaths: [

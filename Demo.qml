@@ -14,36 +14,7 @@
  *
  */
 
+import "Demo"
 
-// You can run your app in Qt Creator by pressing Alt+Shift+R.
-// Alternatively, you can run apps through UI using Tools > External > AppStudio > Run.
-// AppStudio users frequently use the Ctrl+A and Ctrl+I commands to
-// automatically indent the entirety of the .qml file.
-
-
-import QtQuick 2.7
-import QtQuick.Controls 2.1
-
-import ArcGIS.AppFramework 1.0
-import ArcGIS.AppFramework.Controls 1.0
-//import Esri.ArcGISRuntime 100.3
-
-App {
-    id: app
-    width: 400
-    height: 640
-
-
-    Text {
-        anchors.fill: parent
-
-        text: "{My App}"
-        font.pointSize: 24
-        color: "black"
-        wrapMode: Text.WrapAtWordBoundaryOrAnywhere
-        horizontalAlignment: Text.AlignHCenter
-        verticalAlignment: Text.AlignVCenter
-        elide: Text.ElideRight
-    }
-}
+DemoApp {}
 
