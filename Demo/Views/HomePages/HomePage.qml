@@ -12,7 +12,7 @@ import "../../Widgets" as Widgets
 Page {
     id: homePage
 
-    Material.background: colors.app_background
+    Material.background: colors.red_dark_100
 
     StackLayout {
         id: homePageStackLayout
