@@ -25,20 +25,8 @@ App {
     property alias strings: strings
     property alias fonts: fonts
     property alias images: images
+    property alias components: components
     property alias appManager: appManager
-
-    // Pages
-    Component {
-        id: landingPageComponent
-
-        LandingPage {}
-    }
-
-    Component {
-        id: homePageComponent
-
-        HomePage {}
-    }
 
     // Assets
     Assets.Colors { id: colors }
@@ -46,6 +34,7 @@ App {
     Assets.Strings { id: strings }
     Assets.Fonts { id: fonts }
     Assets.Images { id: images }
+    Assets.Components { id: components }
 
     // Controls
     Controls.AppManager {
@@ -57,7 +46,7 @@ App {
         id: stackView
 
         anchors.fill: parent
-        initialItem: landingPageComponent
+        initialItem: components.landingPageComponent
     }
 
     Component.onCompleted: {

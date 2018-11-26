@@ -15,7 +15,15 @@ Rectangle {
     property real normalOpacity: 0.0
     property real pressOpacity: 0.12
 
+    property alias extraItems: extraItems
+
     signal clicked()
+
+    Item {
+        id: extraItems
+
+        anchors.fill: parent
+    }
 
     Rectangle {
         id: background

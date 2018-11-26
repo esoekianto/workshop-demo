@@ -101,7 +101,7 @@ Page {
                 buttonText: strings.sign_in
 
                 onClicked: {
-                    stackView.push(homePageComponent);
+                    stackView.push(components.homePageComponent);
                 }
             }
         }

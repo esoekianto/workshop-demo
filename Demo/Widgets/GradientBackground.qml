@@ -19,50 +19,33 @@ Item {
     Item {
         anchors.fill: parent
 
-        Image {
-            id: image
+        Item {
+            id: content
 
             anchors.fill: parent
-            source: backgroundImage
             visible: false
-        }
 
-        Rectangle {
-            id: imageMask
-
-            anchors.fill: parent
-            radius: root.radius
-            visible: false
-        }
-
-        OpacityMask {
-            anchors.fill: image
-            source: image
-            maskSource: imageMask
-        }
-    }
-
-    Item {
-        anchors.fill: parent
-
-        LinearGradient {
-            id: background
-
-            anchors.fill: parent
-
-            start: Qt.point(0, 0)
-            end: Qt.point(0, height)
-
-            gradient: Gradient {
-                GradientStop { position: 0.0; color: colors.red_dark_70 }
-                GradientStop { position: 1.0; color: colors.red_dark_100 }
+            Image {
+                anchors.fill: parent
+                source: backgroundImage
+                mipmap: true
             }
 
-            visible: false
+            LinearGradient {
+                anchors.fill: parent
+
+                start: Qt.point(0, 0)
+                end: Qt.point(0, height)
+
+                gradient: Gradient {
+                    GradientStop { position: 0.0; color: colors.red_dark_70 }
+                    GradientStop { position: 1.0; color: colors.red_dark_100 }
+                }
+            }
         }
 
         Rectangle {
-            id: backgroundMask
+            id: mask
 
             anchors.fill: parent
             radius: root.radius
@@ -70,9 +53,9 @@ Item {
         }
 
         OpacityMask {
-            anchors.fill: background
-            source: background
-            maskSource: backgroundMask
+            anchors.fill: content
+            source: content
+            maskSource: mask
         }
     }
 }

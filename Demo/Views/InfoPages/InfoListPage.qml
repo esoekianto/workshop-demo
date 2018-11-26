@@ -104,13 +104,20 @@ Page {
 
                     radius: 8 * constants.scaleFactor
 
-                    Widgets.GradientBackground {
-                        radius: delegate.radius
-                        backgroundImage: modelData.background
-                    }
-
                     onClicked: {
 
+                    }
+
+                    Component.onCompleted: {
+                        createGradientBackground();
+                    }
+
+                    function createGradientBackground() {
+                        components.gradientBackgroundComponent.createObject(
+                                    extraItems, {
+                                        radius: delegate.radius,
+                                        backgroundImage: modelData.background
+                                    });
                     }
                 }
             }
