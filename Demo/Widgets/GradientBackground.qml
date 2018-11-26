@@ -22,16 +22,13 @@ Item {
         Image {
             id: image
 
-            width: parent.width
-            anchors.centerIn: parent
+            anchors.fill: parent
             source: backgroundImage
-            fillMode: Image.PreserveAspectFit
-            clip: true
             visible: false
         }
 
         Rectangle {
-            id: mask
+            id: imageMask
 
             anchors.fill: parent
             radius: root.radius
@@ -41,7 +38,7 @@ Item {
         OpacityMask {
             anchors.fill: image
             source: image
-            maskSource: mask
+            maskSource: imageMask
         }
     }
 
