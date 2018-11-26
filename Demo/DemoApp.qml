@@ -1,5 +1,6 @@
 import QtQuick 2.9
 import QtQuick.Controls 2.2
+import QtQuick.Controls.Material 2.2
 
 import ArcGIS.AppFramework 1.0
 import ArcGIS.AppFramework.Controls 1.0
@@ -15,6 +16,8 @@ App {
 
     width: 421
     height: 725
+
+    Material.background: colors.red_dark_100
 
     // Reference
     property alias colors: colors
