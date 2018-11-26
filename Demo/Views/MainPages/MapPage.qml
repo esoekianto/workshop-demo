@@ -12,8 +12,8 @@ Page {
         PictureMarkerSymbol {
             id: defaultSymbol
 
-            width: 20
-            height: 20
+            width: 20 * constants.scaleFactor
+            height: 20 * constants.scaleFactor
             url: images.map_pin_icon
         }
     }
