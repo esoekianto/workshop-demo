@@ -19,4 +19,7 @@ Item {
     readonly property url netherlands_map_icon: "Images/netherlands_map.png"
     readonly property url turkey_map_icon: "Images/turkey_map.png"
     readonly property url uk_map_icon: "Images/uk_map.png"
+
+    // Map
+    readonly property url map_pin_icon: "Images/map_pin.png"
 }
