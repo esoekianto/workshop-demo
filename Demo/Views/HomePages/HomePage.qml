@@ -54,13 +54,13 @@ Page {
                 imageSource:
                     switch (index) {
                     case 0:
-                        return images.listIcon;
+                        return images.list_icon;
 
                     case 1:
-                        return images.mapIcon;
+                        return images.map_icon;
 
                     case 2:
-                        return images.settingsIcon;
+                        return images.settings_icon;
 
                     default:
                         return "";

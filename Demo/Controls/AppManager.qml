@@ -5,6 +5,8 @@ import ArcGIS.AppFramework 1.0
 Item {
     id: appManager
 
+    property real maximumScreenWidth: app.width > 1000 * scaleFactor ? 800 * scaleFactor : 568 * scaleFactor
+
     property bool isIphoneX: false
     property bool isUsingDefaultFont: false
 

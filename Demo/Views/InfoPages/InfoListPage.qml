@@ -4,8 +4,18 @@ import QtQuick.Layouts 1.3
 
 import ArcGIS.AppFramework 1.0
 
+import "../../Widgets" as Widgets
+
 Page {
     id: infoListPage
+
+    property var infoModel: [
+        { icon: images.turkey_icon, name: strings.turkey_santa_name, country: strings.turkey, description: strings.turkey_santa_description },
+        { icon: images.greece_icon, name: strings.greece_santa_name, country: strings.greece, description: strings.greece_santa_description },
+        { icon: images.uk_icon, name: strings.uk_santa_name, country: strings.uk, description: strings.uk_santa_description },
+        { icon: images.netherlands_icon, name: strings.netherlands_santa_name, country: strings.netherlands, description: strings.netherlands_santa_description },
+        { icon: images.japan_icon, name: strings.japan_santa_name, country: strings.japan, description: strings.japan_santa_description }
+    ]
 
     ColumnLayout {
         anchors.fill: parent
@@ -74,6 +84,24 @@ Page {
 
             ListView {
                 anchors.fill: parent
+                spacing: 1
+                clip: true
+                model: infoModel
+
+                delegate: Widgets.TouchGestureArea {
+                    width: Math.min(parent.width, appManager.maximumScreenWidth)
+                    height: 144 * constants.scaleFactor
+
+                    Widgets.GradientBackground {
+
+                    }
+
+                    onClicked: {
+
+                    }
+
+
+                }
             }
         }
     }
