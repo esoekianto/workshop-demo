@@ -108,13 +108,15 @@ Page {
 
                     }
 
+
+
                     Component.onCompleted: {
                         createGradientBackground();
                     }
 
                     function createGradientBackground() {
                         components.gradientBackgroundComponent.createObject(
-                                    extraItems, {
+                                    bottomLayer, {
                                         radius: delegate.radius,
                                         backgroundImage: modelData.background
                                     });

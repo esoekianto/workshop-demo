@@ -7,10 +7,10 @@ Page {
     id: mapPage
 
     SimpleRenderer{
-        id:simpleRender
+        id: simpleRender
 
         PictureMarkerSymbol {
-            id:defaultSymbol
+            id: defaultSymbol
 
             width: 20
             height: 20
@@ -36,9 +36,9 @@ Page {
         }
 
         GraphicsOverlay {
-            id:graphicsOverlay
+            id: graphicsOverlay
 
-            renderer:simpleRender
+            renderer: simpleRender
         }
     }
 

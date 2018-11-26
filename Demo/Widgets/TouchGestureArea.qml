@@ -15,12 +15,12 @@ Rectangle {
     property real normalOpacity: 0.0
     property real pressOpacity: 0.12
 
-    property alias extraItems: extraItems
+    property alias bottomLayer: bottomLayer
 
     signal clicked()
 
     Item {
-        id: extraItems
+        id: bottomLayer
 
         anchors.fill: parent
     }
