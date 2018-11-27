@@ -1,6 +1,8 @@
 import QtQuick 2.9
+import QtQuick.Controls 2.2
 
 import ArcGIS.AppFramework 1.0
+import ArcGIS.AppFramework.Authentication 1.0
 
 Item {
     id: appManager
@@ -9,6 +11,18 @@ Item {
 
     property bool isIphoneX: false
     property bool isUsingDefaultFont: false
+
+    Connections {
+        target: BiometricAuthenticator
+
+        onAccepted: {
+            stackView.push(components.homePageComponent, StackView.Immediate);
+        }
+
+        onRejected: {
+
+        }
+    }
 
     function initialize() {
         // check device

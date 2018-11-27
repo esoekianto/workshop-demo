@@ -3,6 +3,9 @@ import QtQuick 2.9
 Item {
     id: images
 
+    // Landing page
+    readonly property url tree_icon: "Images/tree.png"
+
     // Main pages
     readonly property url list_icon: "Images/baseline_view_list_white_48dp.png"
     readonly property url map_icon: "Images/baseline_map_white_48dp.png"
@@ -24,4 +27,7 @@ Item {
 
     // Map
     readonly property url map_pin_icon: "Images/map_pin.png"
+
+    // Settings
+    readonly property url user_profile_icon: "Images/user_profile.png"
 }

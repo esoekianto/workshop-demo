@@ -24,4 +24,12 @@ Item {
     readonly property string japan_santa_name: qsTr("Hoteiosho")
     readonly property string japan: qsTr("Japan")
     readonly property string japan_santa_description: qsTr("In Japan a traditional Buddhist monk named Hoteiosho carries a sack and bears gifts, but most children fear Hoteiosho and prefer the western Santa Claus tradition.")
+
+    // Settings
+    readonly property string settings: qsTr("Settings")
+    readonly property string sign_out: qsTr("Sign out")
+    readonly property string profile: qsTr("Profile")
+    readonly property string auto_sign_in: qsTr("Auto sign in")
+    readonly property string touch_id: qsTr("Touch ID")
+    readonly property string face_id: qsTr("Face ID")
 }

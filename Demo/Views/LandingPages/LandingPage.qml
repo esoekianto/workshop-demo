@@ -11,7 +11,9 @@ import "../../Widgets" as Widgets
 Page {
     id: landingPage
 
-    Widgets.GradientBackground {}
+    Widgets.GradientBackground {
+        backgroundImage: images.tree_icon
+    }
 
     ColumnLayout {
         anchors.fill: parent

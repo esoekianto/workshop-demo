@@ -22,6 +22,7 @@ TouchGestureArea {
 
         width: Math.max(160 * constants.scaleFactor, this.implicitWidth)
         height: parent.height
+        anchors.horizontalCenter: parent.horizontalCenter
 
         text: buttonText
         color: textColor
