@@ -13,6 +13,8 @@ Rectangle {
 
     property color accent: colors.yellow
 
+    property bool isChecked: false
+
     signal clicked()
 
     RowLayout {
@@ -40,6 +42,7 @@ Rectangle {
         Switch {
             Material.accent: root.accent
             Layout.alignment: Qt.AlignVCenter
+            checked: isChecked
 
             onToggled: {
                 root.clicked();

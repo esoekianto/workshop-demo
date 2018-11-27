@@ -206,8 +206,11 @@ Page {
 
                         title: strings.auto_sign_in
 
-                        onClicked: {
+                        isChecked: appManager.isAutoSignIn
 
+                        onClicked: {
+                            appManager.isAutoSignIn = !appManager.isAutoSignIn;
+                            app.settings.setValue("isAutoSignIn", appManager.isAutoSignIn);
                         }
                     }
 

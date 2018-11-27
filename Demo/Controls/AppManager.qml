@@ -13,6 +13,7 @@ Item {
     property bool isUsingDefaultFont: false
     property bool isiOS: Qt.platform.os === "ios"
     property bool ismacOS: Qt.platform.os === "osx"
+    property bool isAutoSignIn: false
 
     Connections {
         target: BiometricAuthenticator
@@ -29,6 +30,9 @@ Item {
     function initialize() {
         // check device
         isiPhoneX = AppFramework.systemInformation.model.indexOf("iPhone X") > -1;
+
+        // check database
+        isAutoSignIn = app.settings.value("isAutoSignIn", false);
 
         // load font
         if (!isUsingDefaultFont)
