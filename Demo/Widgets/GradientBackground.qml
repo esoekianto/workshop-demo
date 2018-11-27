@@ -16,6 +16,9 @@ Item {
 
     property url backgroundImage: ""
 
+    property color gradientStart: colors.red_dark_70
+    property color gradientEnd: colors.red_dark_100
+
     Item {
         anchors.fill: parent
 
@@ -38,8 +41,8 @@ Item {
                 end: Qt.point(0, height)
 
                 gradient: Gradient {
-                    GradientStop { position: 0.0; color: colors.red_dark_70 }
-                    GradientStop { position: 1.0; color: colors.red_dark_100 }
+                    GradientStop { position: 0.0; color: gradientStart }
+                    GradientStop { position: 1.0; color: gradientEnd }
                 }
             }
         }

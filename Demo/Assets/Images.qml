@@ -20,6 +20,7 @@ Item {
     readonly property url turkey_map_icon: "Images/turkey_map.png"
     readonly property url uk_map_icon: "Images/uk_map.png"
     readonly property url navigate_next_icon: "Images/baseline_navigate_next_white_48dp.png"
+    readonly property url navigate_back_icon: "Images/baseline_arrow_back_white_48dp.png"
 
     // Map
     readonly property url map_pin_icon: "Images/map_pin.png"

@@ -18,6 +18,9 @@ Page {
 
         InfoPages.InfoListPage {}
 
-        InfoPages.InfoElementPage {}
+        InfoPages.InfoElementPage {
+            onNavigateBack:
+                infoPageSwipeView.currentIndex = 0;
+        }
     }
 }

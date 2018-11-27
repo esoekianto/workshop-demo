@@ -17,7 +17,7 @@ App {
     width: 421
     height: 725
 
-    Material.background: colors.red_dark_100
+    Material.background: colors.app_background
 
     // Reference
     property alias colors: colors
