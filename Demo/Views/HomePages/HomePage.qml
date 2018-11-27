@@ -29,13 +29,13 @@ Page {
         id: homePageTabBar
 
         width: parent.width
-        height: 64 * constants.scaleFactor + (appManager.isIphoneX ? 28 * constants.scaleFactor : 0)
+        height: 64 * constants.scaleFactor + (appManager.isiPhoneX ? 28 * constants.scaleFactor : 0)
 
         Material.background: colors.red
         Material.accent: colors.yellow
         Material.elevation: 8
 
-        bottomPadding: appManager.isIphoneX ? 28 * constants.scaleFactor : 0
+        bottomPadding: appManager.isiPhoneX ? 28 * constants.scaleFactor : 0
 
         currentIndex: 0
 

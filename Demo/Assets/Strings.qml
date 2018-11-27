@@ -32,4 +32,5 @@ Item {
     readonly property string auto_sign_in: qsTr("Auto sign in")
     readonly property string touch_id: qsTr("Touch ID")
     readonly property string face_id: qsTr("Face ID")
+    readonly property string fingerprint: qsTr("Fingerprint")
 }

@@ -115,7 +115,7 @@ Page {
 
         Item {
             Layout.fillWidth: true
-            Layout.preferredHeight: appManager.isIphoneX ? 28 * constants.scaleFactor : 0
+            Layout.preferredHeight: appManager.isiPhoneX ? 28 * constants.scaleFactor : 0
         }
     }
 }

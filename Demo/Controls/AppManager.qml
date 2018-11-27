@@ -9,8 +9,10 @@ Item {
 
     property real maximumScreenWidth: app.width > 1000 * constants.scaleFactor ? 800 * constants.scaleFactor : 568 * constants.scaleFactor
 
-    property bool isIphoneX: false
+    property bool isiPhoneX: false
     property bool isUsingDefaultFont: false
+    property bool isiOS: Qt.platform.os === "ios"
+    property bool ismacOS: Qt.platform.os === "osx"
 
     Connections {
         target: BiometricAuthenticator
@@ -26,7 +28,7 @@ Item {
 
     function initialize() {
         // check device
-        isIphoneX = AppFramework.systemInformation.model.indexOf("iPhone X") > -1;
+        isiPhoneX = AppFramework.systemInformation.model.indexOf("iPhone X") > -1;
 
         // load font
         if (!isUsingDefaultFont)

@@ -216,7 +216,7 @@ Page {
                         Layout.preferredHeight: 56 * constants.scaleFactor
                         color: colors.red
 
-                        title: strings.touch_id
+                        title: appManager.isiPhoneX ? strings.face_id : (appManager.isiOS || appManager.ismacOS ? strings.touch_id : strings.fingerprint)
 
                         onClicked: {
 
