@@ -68,7 +68,6 @@ Page {
                         geometry: pointUK
                     });
 
-
         // create graphic for Turkey
         var pointTurkey = ArcGISRuntimeEnvironment.createObject(
                     "Point", {
@@ -107,11 +106,11 @@ Page {
                     "Graphic", {
                         geometry: pointDutch
                     });
+
         graphicsOverlay.graphics.append(graphicJapan);
         graphicsOverlay.graphics.append(graphicUK);
         graphicsOverlay.graphics.append(graphicGreece);
         graphicsOverlay.graphics.append(graphicTurkey);
         graphicsOverlay.graphics.append(graphicDutch);
     }
-
 }
