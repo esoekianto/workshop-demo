@@ -1,7 +1,7 @@
 import QtQuick 2.9
 import QtQuick.Controls 2.2
 
-import Esri.ArcGISRuntime 100.4
+import Esri.ArcGISRuntime 100.3
 
 Page {
     id: mapPage
