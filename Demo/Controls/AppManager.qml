@@ -11,8 +11,8 @@ Item {
 
     property bool isiPhoneX: false
     property bool isUsingDefaultFont: false
-    property bool isiOS: Qt.platform.os === "ios"
-    property bool ismacOS: Qt.platform.os === "osx"
+    property bool isiOS: false
+    property bool ismacOS: false
     property bool isAutoSignIn: false
 
     Connections {
@@ -30,6 +30,8 @@ Item {
     function initialize() {
         // check device
         isiPhoneX = AppFramework.systemInformation.model.indexOf("iPhone X") > -1;
+        isiOS = Qt.platform.os === "ios";
+        ismacOS = Qt.platform.os === "osx";
 
         // check database
         isAutoSignIn = app.settings.value("isAutoSignIn", false);
