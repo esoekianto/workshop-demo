@@ -25,7 +25,7 @@ Page {
         anchors.fill: parent
 
         Map {
-            id: map1
+            id: myMap
 
             BasemapDarkGrayCanvasVector{}
 
