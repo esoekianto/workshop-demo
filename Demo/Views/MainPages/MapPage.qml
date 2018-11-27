@@ -26,6 +26,7 @@ Page {
 
         Map {
             id:map1
+
             BasemapDarkGrayCanvasVector{}
 
             onLoadStatusChanged: {
