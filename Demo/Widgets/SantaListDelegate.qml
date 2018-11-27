@@ -64,7 +64,7 @@ TouchGestureArea {
 
                             text: modelData.name
                             color: colors.white
-                            font.family: fonts.sf_pro_text
+                            font.family: fonts.sf_pro_display
                             font.pixelSize: 16 * constants.scaleFactor
                             elide: Text.ElideRight
                             clip: true

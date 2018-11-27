@@ -66,7 +66,7 @@ Page {
 
                 text: strings.around_the_world
                 color: colors.yellow
-                font.family: fonts.sf_pro_text
+                font.family: fonts.sf_pro_display
                 font.pixelSize: 20 * constants.scaleFactor
                 elide: Text.ElideRight
                 clip: true

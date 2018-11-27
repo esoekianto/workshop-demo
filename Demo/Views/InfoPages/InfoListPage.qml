@@ -65,7 +65,7 @@ Page {
 
                 text: strings.around_the_world
                 color: colors.yellow
-                font.family: fonts.sf_pro_text
+                font.family: fonts.sf_pro_display
                 font.pixelSize: 20 * constants.scaleFactor
                 elide: Text.ElideRight
                 clip: true
@@ -104,11 +104,25 @@ Page {
                     radius: 8 * constants.scaleFactor
 
                     onClicked: {
-                        infoPageSwipeView.currentIndex = 1;
+                        navigateToDetailPage();
                     }
 
                     Component.onCompleted: {
                         createGradientBackground();
+                    }
+
+                    function navigateToDetailPage() {
+                        // reset data
+                        infoPageSwipeView.contentChildren[1].reset();
+
+                        // pass data
+                        infoPageSwipeView.contentChildren[1].elementImage = modelData.icon;
+                        infoPageSwipeView.contentChildren[1].elementTitle = modelData.name;
+                        infoPageSwipeView.contentChildren[1].elementSubtitle = modelData.country;
+                        infoPageSwipeView.contentChildren[1].elementDescription = modelData.description;
+
+                        // navigate
+                        infoPageSwipeView.currentIndex = 1;
                     }
 
                     function createGradientBackground() {
