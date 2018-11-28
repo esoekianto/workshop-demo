@@ -39,5 +39,7 @@ Item {
         // load font
         if (!isUsingDefaultFont)
             fonts.loadFonts();
+
+        // BiometricAuthenticator
     }
 }

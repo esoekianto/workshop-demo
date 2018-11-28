@@ -42,6 +42,9 @@ Item {
                         break;
                     }
                 }
+
+                if (status === FontLoader.Error)
+                    console.error("The Font %1 can not be loaded!".arg(name));
             }
         }
     }
