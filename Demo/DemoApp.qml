@@ -42,6 +42,11 @@ App {
         id: appManager
     }
 
+    // Plugins
+    TextToSpeech {
+        id: tts
+    }
+
     // Stack view
     StackView {
         id: stackView
@@ -51,15 +56,12 @@ App {
     }
 
     Component.onCompleted: {
-        tts.say("Santa around the world says Hello!")
         initialize();
     }
 
     function initialize() {
-        appManager.initialize();
-    }
+        tts.say("Santa around the world says Hello!")
 
-    TextToSpeech {
-        id: tts
+        appManager.initialize();
     }
 }

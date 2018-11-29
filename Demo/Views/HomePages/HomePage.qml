@@ -12,6 +12,8 @@ import "../../Widgets" as Widgets
 Page {
     id: homePage
 
+    property var tabBarIcons: [images.list_icon, images.map_icon, images.settings_icon]
+
     StackLayout {
         id: homePageStackLayout
 
@@ -51,20 +53,7 @@ Page {
             delegate: Widgets.TabButton {
                 height: parent.height
 
-                imageSource:
-                    switch (index) {
-                    case 0:
-                        return images.list_icon;
-
-                    case 1:
-                        return images.map_icon;
-
-                    case 2:
-                        return images.settings_icon;
-
-                    default:
-                        return "";
-                    }
+                imageSource: tabBarIcons[index]
 
                 imageColor: checked ? colors.yellow : colors.white
             }

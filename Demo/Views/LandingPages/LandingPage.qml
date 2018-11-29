@@ -104,12 +104,11 @@ Page {
                 buttonText: strings.sign_in
 
                 onClicked: {
-                    if (appManager.usesBiometricAuthentication)
-                    {
+                    if (appManager.isBiometricAuthenticationEnabled) {
                         if (BiometricAuthenticator.supported && BiometricAuthenticator.activated) {
                             BiometricAuthenticator.authenticate()
                         } else {
-                            console.log("Not supported")
+                            console.log("BiometricAuthenticator is not supported.");
                             stackView.push(components.homePageComponent, StackView.Immediate);
                         }
                     } else {

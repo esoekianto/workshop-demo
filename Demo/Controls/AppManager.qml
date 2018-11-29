@@ -14,7 +14,7 @@ Item {
     property bool isiOS: false
     property bool ismacOS: false
     property bool isAutoSignIn: false
-    property bool usesBiometricAuthentication: false
+    property bool isBiometricAuthenticationEnabled: false
 
     Connections {
         target: BiometricAuthenticator
@@ -24,7 +24,7 @@ Item {
         }
 
         onRejected: {
-
+            // do things in here
         }
     }
 
@@ -38,7 +38,7 @@ Item {
         isAutoSignIn = app.settings.value("isAutoSignIn", false);
 
         // check uses biometric authentication
-        usesBiometricAuthentication = app.settings.value("usesBiometricAuthentication", false)
+        isBiometricAuthenticationEnabled = app.settings.value("isBiometricAuthenticationEnabled", false)
 
         // load font
         if (!isUsingDefaultFont)

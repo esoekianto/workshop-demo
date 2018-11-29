@@ -214,6 +214,7 @@ Page {
                         }
                     }
 
+                    // You need to write extra logic for the visibility of this section
                     Widgets.Lists {
                         Layout.fillWidth: true
                         Layout.preferredHeight: 56 * constants.scaleFactor
@@ -222,8 +223,8 @@ Page {
                         title: appManager.isiPhoneX ? strings.face_id : (appManager.isiOS || appManager.ismacOS ? strings.touch_id : strings.fingerprint)
 
                         onClicked: {
-                            appManager.usesBiometricAuthentication = !appManager.usesBiometricAuthentication
-                            app.settings.setValue("usesBiometricAuthentication", appManager.usesBiometricAuthentication)
+                            appManager.isBiometricAuthenticationEnabled = !appManager.isBiometricAuthenticationEnabled
+                            app.settings.setValue("isBiometricAuthenticationEnabled", appManager.isBiometricAuthenticationEnabled)
                         }
                     }
                 }

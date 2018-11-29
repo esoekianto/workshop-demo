@@ -11,11 +11,10 @@ TouchGestureArea {
 
     property color textColor: colors.white
 
+    property string fontFamily: fonts.system
     property string buttonText: ""
 
     property real textSize: 16 * constants.scaleFactor
-
-    property string fontFamily: fonts.system
 
     Label {
         id: content
