@@ -123,8 +123,6 @@ Page {
 
                         // navigate
                         infoPageSwipeView.currentIndex = 1;
-
-                        // Text to speech
                     }
 
                     function createGradientBackground() {

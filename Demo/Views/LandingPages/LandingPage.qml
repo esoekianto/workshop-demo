@@ -5,6 +5,7 @@ import QtQuick.Controls.Material 2.2
 
 import ArcGIS.AppFramework 1.0
 import ArcGIS.AppFramework.Controls 1.0
+import ArcGIS.AppFramework.Authentication 1.0
 
 import "../../Widgets" as Widgets
 
@@ -103,7 +104,17 @@ Page {
                 buttonText: strings.sign_in
 
                 onClicked: {
-                    stackView.push(components.homePageComponent, StackView.Immediate);
+                    if (appManager.usesBiometricAuthentication)
+                    {
+                        if (BiometricAuthenticator.supported && BiometricAuthenticator.activated) {
+                            BiometricAuthenticator.authenticate()
+                        } else {
+                            console.log("Not supported")
+                            stackView.push(components.homePageComponent, StackView.Immediate);
+                        }
+                    } else {
+                        stackView.push(components.homePageComponent, StackView.Immediate);
+                    }
                 }
             }
         }

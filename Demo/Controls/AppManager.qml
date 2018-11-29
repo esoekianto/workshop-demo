@@ -14,6 +14,7 @@ Item {
     property bool isiOS: false
     property bool ismacOS: false
     property bool isAutoSignIn: false
+    property bool usesBiometricAuthentication: false
 
     Connections {
         target: BiometricAuthenticator
@@ -36,10 +37,11 @@ Item {
         // check database
         isAutoSignIn = app.settings.value("isAutoSignIn", false);
 
+        // check uses biometric authentication
+        usesBiometricAuthentication = app.settings.value("usesBiometricAuthentication", false)
+
         // load font
         if (!isUsingDefaultFont)
             fonts.loadFonts();
-
-        // BiometricAuthenticator
     }
 }

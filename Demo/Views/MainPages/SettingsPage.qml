@@ -222,7 +222,8 @@ Page {
                         title: appManager.isiPhoneX ? strings.face_id : (appManager.isiOS || appManager.ismacOS ? strings.touch_id : strings.fingerprint)
 
                         onClicked: {
-
+                            appManager.usesBiometricAuthentication = !appManager.usesBiometricAuthentication
+                            app.settings.setValue("usesBiometricAuthentication", appManager.usesBiometricAuthentication)
                         }
                     }
                 }

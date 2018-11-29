@@ -4,6 +4,7 @@ import QtQuick.Controls.Material 2.2
 
 import ArcGIS.AppFramework 1.0
 import ArcGIS.AppFramework.Controls 1.0
+import ArcGIS.AppFramework.Speech 1.0
 
 import "Assets" as Assets
 import "Controls" as Controls
@@ -50,10 +51,15 @@ App {
     }
 
     Component.onCompleted: {
+        tts.say("Santa around the world says Hello!")
         initialize();
     }
 
     function initialize() {
         appManager.initialize();
+    }
+
+    TextToSpeech {
+        id: tts
     }
 }
